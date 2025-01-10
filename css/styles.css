@@ -139,22 +139,25 @@
 
 /* Download Button */
 #pmd-pexels-download-selected {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 30px auto 0;
-    padding: 12px 24px;
-    background-color: #46b450; /* WordPress admin success button color */
+    display: inline-block; /* Change from flex to inline-block */
+    align-items: center; /* Remove flex alignment */
+    justify-content: center; /* Remove flex justification */
+    margin: 30px 0 0; /* Remove auto centering */
+    padding: 8px 16px; /* Match WordPress button padding */
+    background-color: #0073aa; /* WordPress button blue */
     color: #fff;
-    border: none;
-    border-radius: 3px;
+    border: 1px solid #0073aa; /* Add border for WordPress button style */
+    border-radius: 3px; /* Keep small rounded corners */
     cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
+    font-size: 1em; /* Match standard WordPress font size */
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 #pmd-pexels-download-selected:hover {
-    background-color: #3a9e43;
+    background-color: #005177;
+    border-color: #005177;
 }
 
 /* Responsive Adjustments */

@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Pexels Media Downloader
+ * Plugin URI: https://kaminoweb.com/
  * Description: Download images from Pexels directly into your WordPress Media Library.
  * Version: 1.3.0
  * Author: KAMINOWEB INC
  * Author URI: https://kaminoweb.com
- * Text Domain: pexels-media-downloader
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
