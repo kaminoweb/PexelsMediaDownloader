@@ -27,7 +27,9 @@
     border: 1px solid #ccd0d4;
     border-radius: 3px;
     font-size: 1em;
-    flex: 1 1 200px;
+    flex: 1 1 auto;
+    width: 100%; /* Ensure full width for mobile */
+    box-sizing: border-box;
 }
 
 .pmd-search-form select {
@@ -59,8 +61,9 @@
 /* Results Gallery */
 .pmd-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(5, 1fr); /* Ensure 4 columns */
     gap: 15px;
+    width: 100%; /* Ensure the gallery fills the page width */
 }
 
 .pmd-image {
@@ -70,6 +73,9 @@
     overflow: hidden;
     background-color: #f1f1f1;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex; /* Ensure alignment for varying image sizes */
+    align-items: center;
+    justify-content: center;
 }
 
 .pmd-image:hover {
@@ -79,7 +85,8 @@
 
 .pmd-image img {
     width: 100%;
-    height: auto;
+    height: 100%; /* Fill the container */
+    object-fit: cover; /* Maintain image proportions and crop excess */
     display: block;
 }
 
@@ -159,11 +166,15 @@
     .pmd-search-form button {
         width: 100%;
     }
+
+    .pmd-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for smaller screens */
+    }
 }
 
 @media (max-width: 600px) {
     .pmd-gallery {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        grid-template-columns: repeat(1, 1fr); /* Adjust to 1 column for narrow screens */
     }
 
     .pmd-pagination {
@@ -177,6 +188,21 @@
 
     #pmd-pexels-download-selected {
         width: 100%;
+    }
+
+    .pmd-search-form {
+        flex-direction: column; /* Stack form elements vertically */
+    }
+
+    .pmd-search-form input[type="text"],
+    .pmd-search-form select,
+    .pmd-search-form input[type="number"],
+    .pmd-search-form button {
+        width: 100%; /* Make all form elements full width */
+    }
+
+    .pmd-search-form button {
+        justify-content: center; /* Center the button content */
     }
 }
 

@@ -142,10 +142,10 @@ class PMD_Pexels_Media_Downloader {
                 <input type="number" id="pmd-pexels-min-width" name="min_width" placeholder="<?php esc_attr_e( 'Min Width (px)', 'pexels-media-downloader' ); ?>" min="0" />
                 <input type="number" id="pmd-pexels-min-height" name="min_height" placeholder="<?php esc_attr_e( 'Min Height (px)', 'pexels-media-downloader' ); ?>" min="0" />
 
-                <button type="submit" class="button button-primary"><span class="dashicons dashicons-search"></span> <?php esc_html_e( 'Search', 'pexels-media-downloader' ); ?></button>
+                <button type="submit" class="button button-primary"><?php esc_html_e( 'Search', 'pexels-media-downloader' ); ?></button>
             </form>
             <div id="pmd-pexels-results"></div>
-            <button id="pmd-pexels-download-selected" class="button button-success"><span class="dashicons dashicons-download"></span> <?php esc_html_e( 'Download Selected', 'pexels-media-downloader' ); ?></button>
+            <button id="pmd-pexels-download-selected" class="button button-primary"><strong><?php esc_html_e( 'Download Selected', 'pexels-media-downloader' ); ?></strong></button>
         </div>
         <?php
     }
